@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+
+
+
+<script>
+
+function isPalindrome(text)
+{
+	
+	var reversedString = text.split("").reverse().join("");
+	
+	for(var i = 0; i < text.length ; i++)
+	{
+		if(text[i] != reversedString[i] )
+		{
+			return false;
+		}
+	}
+	
+	
+	return true;
+}
+
+console.log(isPalindrome("madamimadam"))
+
+
+function minSplit (total) {
+	var currentValue = total;
+	var result = 0;
+	
+	while (currentValue != 0)
+	{
+		if (currentValue - 50 > 0)
+		{
+			currentValue = currentValue - 50;
+		} 
+		else if (currentValue - 20 > 0){
+			currentValue = currentValue - 20;
+		} 
+		else if (currentValue - 10 > 0){
+			currentValue = currentValue - 10;	
+		} 
+		else if (currentValue - 5 > 0){
+			currentValue = currentValue - 5;	
+		} 
+		else{
+			currentValue = currentValue - 1;
+		}
+		
+		result++;
+	}
+	
+	return result;
+
+}
+
+console.log(minSplit(86))
+
+
+function contains(array)
+{
+	var minValue = 1;
+	
+	for(var i = 0; i < array.length ; i++)
+	{
+		if(array.includes(minValue))
+		{
+			minValue++;
+		}
+		else
+		{
+			return minValue;
+		}
+	}
+	
+	return minValue;
+}
+
+console.log(contains([5, 2, 3, 1]));
+
+
+function isProperly(array)
+{
+	var counter = 0;
+	for(var i = 0; i < array.length ; i++)
+	{
+     if(array[i]=="(")
+	 {
+     counter++;
+	 }
+     else
+	 {
+     counter--;
+	 }
+	 if(counter < 0)
+	 {
+     return false;
+	 }
+	}
+	if(counter == 0)
+	{
+		return true;
+	}
+	else 
+	{
+		return false;
+	}
+	
+}
+
+
+console.log(isProperly(")()("))
+
+
+
+
+
+</script>
